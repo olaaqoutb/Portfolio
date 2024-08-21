@@ -3,6 +3,8 @@ import "./Hero.css";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion"
 import devAnimation from "../../animation/dev.json";
+import my from "../../assets/me2.png"
+
 const Hero = () => {
   return (
     <section className="hero flex">
@@ -12,7 +14,7 @@ const Hero = () => {
            initial={{transform:"scale(0)"}}
            animate={{transform:"scale(1.1)"}}
            transition={{damping:6, type:"spring",stiffness:100}}
-          src="/public/me2.png" alt="" className="avatar" />
+          src={my} alt="" className="avatar" />
           <div className="icon-verified"></div>
         </div>
         <motion.h1 
