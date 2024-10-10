@@ -1,26 +1,88 @@
 import "./Main.css";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import img1 from "../../assets/img1.png"
-import img2 from "../../assets/img2.png"
-import img3 from "../../assets/img3.png"
-import img4 from "../../assets/img4.png"
-import img5 from "../../assets/img5.png"
-import img6 from "../../assets/img6.png"
-import img7 from "../../assets/img7.png"
-import img8 from "../../assets/img8.jpeg"
-import img9 from "../../assets/img9.png"
+import img1 from "../../assets/guest-house.jpg";
+import img2 from "../../assets/to-do-list.jpg"
+import img4 from "../../assets/portfolio.jpg";
+import img5 from "../../assets/landing-page.jpg";
+import img6 from "../../assets/prayer.jpg";
+import img7 from "../../assets/img7.png";
+import img8 from "../../assets/form.jpg";
+import img9 from "../../assets/bug-fixer.jpg";
 
 const myProjects = [
-  { id: 1, projectTitle: "Html & Css project", category: ["css"], imgPath: img1, projectDesc: "This is a landing page made with HTML and CSS. I also used Bootstrap for the footer and the form, and I customized it to suit my needs." },
-  { id: 2, projectTitle: "js & css project", category: ["js"], imgPath: img2, projectDesc: "This is a home page with a background video of a movie, a brief description of the movie, and a button to watch the movie. When you click this button, it takes you to another page with details about the movie and its trailer. The movie will be available soon. There is also a toggle switch for light and dark mode, which I implemented using JavaScript. At the bottom, there is a section with a number of various movies." },
-  { id: 3, projectTitle: "css project", category: ["css"], imgPath: img3, projectDesc: "This is a sidebar with a list of movie categories. There are six sections: Western, Arabic, Indian, Cartoon, and movies from the years 2020, 2021, 2022, and 2023. I created this using CSS and Bootstrap." },
-  { id: 4, projectTitle: "js & css project", category: ["js"], imgPath:  img4, projectDesc: "This is the details page for the movie that appears when you click the watch button. I used HTML and CSS for everything, and Bootstrap for the footer. For the dark and light mode toggle, I used JavaScript." },
-  { id: 5, projectTitle: "react project", category: ["react"], imgPath:  img5, projectDesc: "This is a page from the categories section, specifically the Western movies section. It contains a large number of diverse movies, each with its own separate page for details and watching the movie. I created this using React." },
-  { id: 6, projectTitle: "bootstrap project", category: ["bootstrap"], imgPath:  img6, projectDesc: "This is a website that mimics Noon, which I created entirely with Bootstrap. I definitely did some customization to achieve this final look." },
-  { id: 7, projectTitle: "bootstrap project", category: ["bootstrap"], imgPath:  img7, projectDesc: "This is a website that mimics Noon, which I created entirely with Bootstrap. I definitely did some customization to achieve this final look.." },
-  { id: 8, projectTitle: "react project", category: ["react"], imgPath:  img8, projectDesc: "This is a to-do list where you can write down your tasks, add them, and then either delete them or move them up and down based on their importance. It has a simple, user-friendly, and beautiful design that I created using React." },
-  { id: 9, projectTitle: "API project", category: ["react"], imgPath:  img9, projectDesc: "This is a code bug fixer that I created using API and JavaScript. You can add the code with an error, and it will fix it and provide you with the corrected code. It has a beautiful and user-friendly design." },
+  {
+    id: 1,
+    projectTitle: "Guest House",
+    category: ["react","css","bootstrap"],
+    imgPath: img1,
+    projectDesc:
+      "This guest house website, built with React and Material-UI, features a responsive design that ensures a seamless experience on all devices. Utilizing GSAP for smooth animations, it enhances key elements like the booking form and image galleries. The site also includes an interactive virtual tour, allowing potential guests to explore the premises before making a reservation.",
+    projectLink: "https://nubian-house-9xl8.vercel.app",
+  },
+  {
+    id: 2,
+    projectTitle: "To-DO-List",
+    category: ["react", "css"],
+    imgPath: img2,
+    projectDesc:
+      "This project is a responsive To-Do List application built with React and styled using Material-UI. It allows users to add, delete, and rearrange tasks easily, featuring interactive buttons and a clean, dark-themed interface. The design ensures usability across various screen sizes, making task management seamless on both desktop and mobile devices.",
+    projectLink: "https://to-do-list-chi-coral-79.vercel.app",
+  },
+  {
+    id: 3,
+    projectTitle: "Portfolio",
+    category: ["css"],
+    imgPath: img4,
+    projectDesc:
+      "This project is a responsive portfolio website created using HTML and CSS, showcasing various projects and skills in a visually appealing layout. The design adapts seamlessly to different screen sizes, ensuring a user-friendly experience on both desktop and mobile devices.",
+    projectLink: "https://olaaqoutb.github.io/simple-portfolio/",
+  },
+  {
+    id: 4,
+    projectTitle: "Landing Page",
+    category: ["js"],
+    imgPath: img5,
+    projectDesc:
+      "This landing page is crafted using GSAP for engaging animations and transitions, creating a dynamic user experience. It is fully responsive, ensuring optimal display and functionality across various devices and screen sizes.",
+    projectLink: " https://olaaqoutb.github.io/landing-page/",
+  },
+  {
+    id: 5,
+    projectTitle: "Prayer-Time",
+    category: ["react"],
+    imgPath: img6,
+    projectDesc:
+      "The prayer time application utilizes advanced APIs to accurately display prayer times based on the user's location. Built with Material UI, it offers a modern and user-friendly interface, ensuring a seamless experience across devices.",
+    projectLink: "https://prayer2-time-39ub.vercel.app",
+  },
+  {
+    id: 6,
+    projectTitle: "Noon",
+    category: ["bootstrap"],
+    imgPath: img7,
+    projectDesc:
+      "This project, inspired by Noon, showcases a dynamic e-commerce platform designed with Bootstrap for responsive and mobile-friendly layouts. It features an intuitive user interface, allowing seamless navigation through products, categories, and a streamlined checkout process.",
+    projectLink: "https://olaaqoutb.github.io/noon2/",
+  },
+  {
+    id: 7,
+    projectTitle: "Animation Form",
+    category: ["react"],
+    imgPath: img8,
+    projectDesc:
+      "This project features a highly interactive form built with GSAP animations, enhancing user engagement through smooth transitions and visual feedback. It incorporates robust validation mechanisms to ensure accurate input, providing real-time error messages and a seamless user experience.",
+    projectLink: "https://code-storm-one.vercel.app",
+  },
+  {
+    id: 8,
+    projectTitle: "Bug-Fixer",
+    category: ["react"],
+    imgPath: img9,
+    projectDesc:
+      "This project is a bug fixer application that leverages the Gemini API to analyze and resolve code issues efficiently. It provides users with detailed explanations and corrected code snippets, streamlining the debugging process and enhancing overall productivity.",
+    projectLink: "https://olaaqoutb.github.io/bug-fixer/",
+  },
 ];
 
 const Main = () => {
@@ -82,17 +144,24 @@ const Main = () => {
               initial={{ transform: "scale(0)" }}
               animate={{ transform: "scale(1)" }}
               transition={{ type: "spring", damping: 8, stiffness: 50 }}
-              key={item.id} // استخدم مفتاح فريد هنا
+              key={item.id}
               className="card"
             >
               <img width={266} src={item.imgPath} alt="" />
               <div style={{ width: "266px" }} className="box">
                 <h1 className="title">{item.projectTitle}</h1>
-                <p className="sub-title" >{item.projectDesc}</p>
+                <p className="sub-title">{item.projectDesc}</p>
                 <div className="flex icons">
                   <div style={{ gap: "11px" }} className="flex">
-                    <div className="icon-link"></div>
-                    <div className="icon-github"></div>
+                   
+                      <a
+                        href={item.projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="icon-link"></span> {/* Link icon */}
+                      </a>
+               
                   </div>
                   <a href="" className="link flex">
                     More
